@@ -1,43 +1,6 @@
-# ============================================================
-# AI Speech-to-Text Agent - Production Requirements
-# Python 3.11 Compatible
-# Compatible with: Streamlit Cloud, Windows, Linux, macOS
-# ============================================================
-
-# ── Core Framework ──────────────────────────────────────────
-streamlit>=1.35.0
-
-# ── Speech Recognition Engine ───────────────────────────────
-# Faster-Whisper: optimized CTranslate2-based Whisper inference
-faster-whisper>=1.0.0
-
-# ── Audio Processing ────────────────────────────────────────
-pydub>=0.25.1          # Audio format conversion & manipulation
-soundfile>=0.12.1      # Read/write audio files (WAV, FLAC, OGG)
-librosa>=0.10.1        # Audio analysis: sample rate, duration, features
-numpy>=1.24.0          # Numerical processing backbone
-scipy>=1.11.0          # Signal processing, noise reduction
-
-# ── NLP & AI Analysis (via Anthropic API) ───────────────────
-anthropic>=0.25.0      # Claude API for NLP analysis, summarization, extraction
-
-# ── Data & Analytics ────────────────────────────────────────
-pandas>=2.0.0          # Tabular data, CSV export, analytics
-plotly>=5.18.0         # Interactive charts for analytics dashboard
-
-# ── Fuzzy Search ────────────────────────────────────────────
-rapidfuzz>=3.6.0       # Fuzzy keyword search across transcript history
-
-# ── Export Utilities ────────────────────────────────────────
-# JSON and CSV handled by stdlib + pandas
-# TXT handled by stdlib
-
-# ── Audio Recording (browser microphone) ────────────────────
-streamlit-audiorecorder>=0.0.5   # In-browser mic recording widget
-
-# ── Temporary File & System Utilities ───────────────────────
-# tempfile, pathlib, datetime, logging, uuid → stdlib (no install needed)
-
-# ── Optional: GPU acceleration (auto-detected at runtime) ───
-# CTranslate2 (used internally by faster-whisper) will use CUDA if available
-# No explicit cuda package needed; faster-whisper handles device detection
+streamlit==1.35.0
+tensorflow==2.12.0
+numpy==1.23.5
+gTTS==2.5.1
+speechrecognition==3.10.4
+pydub==0.25.1
